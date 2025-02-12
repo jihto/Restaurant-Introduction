@@ -29,7 +29,7 @@ const Introduction: React.FC = () => {
       />
       <div className='my-20'>
         {/* Đội ngũ */}
-        <div className='container grid grid-cols-2 gap-4 justify-center items-center'>
+        <div className='container grid md:grid-cols-2 gap-4 justify-center items-center'>
           <img src={BannerImage} alt="giới thiệu" className='w-full h-full object-cover'/>
           <div className='space-y-4'>
             <p className='text-xl text-gray-600'>Chủ nhà hàng</p>
@@ -45,7 +45,7 @@ const Introduction: React.FC = () => {
         <div className='text-center py-20 container'>
           <h2 className='text-3xl font-bold '>Cam kết chất lượng</h2>
           <p className='text-lg text-gray-600 mb-10 mt-3'>Với tiêu chí đề cao chất lượng lên hàng đầu</p>
-          <div className='grid grid-cols-3 gap-4'>
+          <div className='grid grid-cols-1 lg:grid-cols-3 gap-4'>
             {
               data.map(item => (
                 <div className='rounded shadow-md min-h-[500px] relative'>

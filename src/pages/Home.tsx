@@ -15,9 +15,9 @@ const Home: React.FC = () => {
             {/* Banner */}
             <div className='relative h-screen' style={{ backgroundColor: '#3a3a3a' }}>
                 <img src={Banner} alt="Banner" className='w-full h-full object-cover' />
-                <div className='absolute top-1/2 left-40 transform space-y-5'>
-                    <h1 className=' text-3xl font-bold text-white font-sans'>Nhà hàng Solstice</h1>
-                    <p className='text-2xl text-gray-100'>Thưởng thức các món ăn đậm đà bản sắc, được chế biến từ <br/> nguyên liệu tưới ngon. Đặt bàn ngay!</p>
+                <div className='absolute top-1/2 left-10 md:left-40 transform space-y-5'>
+                    <h1 className='text-3xl md:text-5xl font-bold text-white font-sans'>Nhà hàng Solstice</h1>
+                    <p className='text-base md:text-2xl text-gray-100'>Thưởng thức các món ăn đậm đà bản sắc, được chế biến từ <br/> nguyên liệu tưới ngon. Đặt bàn ngay!</p>
                     <Button>
                         Đặt bàn ngay <ArrowRight />
                     </Button>
@@ -36,7 +36,7 @@ const Home: React.FC = () => {
                         NGƯỜI SÁNG LẬP THƯƠNG HIỆU Solstice
                     </p>
                     <p className="text-lg italic text-[#c49a6c] font-medium mt-1">
-                        Nguyễn Trường Thịnh
+                        Hồ Trường Thịnh
                     </p>
                 </div>
 

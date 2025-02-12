@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Link } from "react-router-dom"; 
-import Logo from "../assets/images/logo.png";
+import { Link } from "react-router-dom";  
+import { AlignJustify, Leaf } from "lucide-react";
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
@@ -9,7 +9,7 @@ const Navbar = () => {
             <div className="container mx-auto flex items-center justify-between">
                 {/* Logo */}
                 <div className="text-2xl font-bold"> 
-                    <img src={Logo} alt="Japanese" className="w-20 h-10 object-cover cursor-pointer" /> 
+                <Leaf />
                 </div>
 
                 {/* Navigation */}
@@ -28,19 +28,19 @@ const Navbar = () => {
 
                 {/* Mobile Menu Button */}
                 <button className="md:hidden block" onClick={() => setIsOpen(!isOpen)}>
-                    Menu
+                <AlignJustify />
                 </button>
             </div>
 
             {/* Mobile Menu */}
             {isOpen && (
-                <div className="absolute left-0 top-full w-full bg-black bg-opacity-90 p-4 text-center md:hidden">
-                    <Link to="/" className="block py-2 text-white">TRANG CHỦ</Link>
-                    <Link to="/about" className="block py-2 text-white">GIỚI THIỆU</Link>
-                    <Link to="/menu" className="block py-2 text-white">THỰC ĐƠN</Link>
-                    <Link to="/gallery" className="block py-2 text-white">HÌNH ẢNH</Link>
-                    <Link to="/news" className="block py-2 text-white">TIN TỨC</Link>
-                    <Link to="/contact" className="block py-2 text-white">LIÊN HỆ</Link>
+                <div className="absolute left-0 top-full w-full h-screen bg-black/90 bg-opacity-50 p-4 text-center md:hidden space-y-5">
+                    <Link onClick={() => setIsOpen(!isOpen)} to="/" className="block py-2 text-white">TRANG CHỦ</Link>
+                    <Link onClick={() => setIsOpen(!isOpen)} to="/about" className="block py-2 text-white">GIỚI THIỆU</Link>
+                    <Link onClick={() => setIsOpen(!isOpen)} to="/menu" className="block py-2 text-white">THỰC ĐƠN</Link>
+                    <Link onClick={() => setIsOpen(!isOpen)} to="/gallery" className="block py-2 text-white">HÌNH ẢNH</Link>
+                    <Link onClick={() => setIsOpen(!isOpen)} to="/news" className="block py-2 text-white">TIN TỨC</Link>
+                    <Link onClick={() => setIsOpen(!isOpen)} to="/contact" className="block py-2 text-white">LIÊN HỆ</Link>
                 </div>
             )}
         </header> 
