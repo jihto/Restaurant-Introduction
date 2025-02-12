@@ -1,5 +1,3 @@
-import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
 
 interface ScrollRevealProps {
     id: string;
@@ -8,24 +6,7 @@ interface ScrollRevealProps {
     subtitle?: string;
 }
 
-const ScrollReveal: React.FC<ScrollRevealProps> = ({ id, imageSrc, title, subtitle }) => {
-    const [isVisible, setIsVisible] = useState(false);
-
-    useEffect(() => {
-        const handleScroll = () => {
-        const element = document.getElementById(id);
-        if (element) {
-            const rect = element.getBoundingClientRect();
-            if (rect.top < window.innerHeight * 0.75) {
-            setIsVisible(true);
-            }
-        }
-        };
-
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
-
+const ScrollReveal: React.FC<ScrollRevealProps> = ({ id, imageSrc, title, subtitle }) => {  
     return (
         <div id={id} className="relative h-[600px] mb-5 flex justify-center items-center bg-gray-900">
         <img
